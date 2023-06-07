@@ -539,10 +539,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 4.1109715
+  m_Radius: 1.2256447
+  m_Height: 4.3889837
   m_Direction: 1
-  m_Center: {x: 0, y: 1.5554857, z: 0}
+  m_Center: {x: 0, y: 1.5554857, z: 0.033813477}
 --- !u!1 &534346600
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cabf1857eec6dd243b25ec67651631ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 566.71
+      value: 565.98
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cabf1857eec6dd243b25ec67651631ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2265,7 +2265,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1.3045418
   m_Height: 4.1109715
   m_Direction: 1
   m_Center: {x: 0, y: 1.5554857, z: 0}

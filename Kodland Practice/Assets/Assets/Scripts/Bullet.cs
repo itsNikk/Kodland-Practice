@@ -12,10 +12,6 @@ namespace Assets.Scripts {
 
         public static Action OnAlienDeath;
 
-        private void ExecuteAlienDeath() {
-            Destroy(gameObject);
-        }
-
         private void Awake() {
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             _rb = GetComponent<Rigidbody>();
@@ -27,6 +23,7 @@ namespace Assets.Scripts {
 
         private void FixedUpdate() {
             _rb.velocity += _mainCamera.transform.forward * (SPEED * Time.fixedTime);
+            if (_rb.velocity.sqrMagnitude > SPEED) _rb.velocity *= 0.99f;
         }
 
         private void OnTriggerEnter(Collider other) {

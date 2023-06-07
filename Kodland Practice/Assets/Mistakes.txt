@@ -8,7 +8,7 @@ Errori trovati
 4) Il proiettile non distrugge i nemici e non si distrugge al contatto, 
 il che lascia nella gerachia tutte le copie dei proiettili sparati dal giocatore all'infinito, appesantendo l'esecuzione.
 5) E' assente la gestione del movimento del giocatore
-5.1) Il componente CharacterController, giustamente posizionato sul GameObject del giocatore, risultao inattivo nella gerarchia
+5.1) Il componente CharacterController, giustamente posizionato sul GameObject del giocatore, risulta inattivo nella gerarchia
 6) lo script PlayerController.cs non dovrebbe avere responsabilità circa la comprensione della vincita o perdita del gioco.
 7) Nello script PlayerLook.cs non si utilizza Time.deltaTime per essere Frame-Inpendent quanto si ottengono i valori dal mouse
 8) Lo script PlayerLook.cs dovrebbe essere messo sullamain camera associata al GO de giocatore.
@@ -17,3 +17,4 @@ il che lascia nella gerachia tutte le copie dei proiettili sparati dal giocatore
 
 NOTE:
 Per semplicità non si è usato il nuovo Input System di Unity ma è consigliato l'utilizzo.
+Per semplicità la gestione dell'evento della morte di un nemico è gestito sul proiettile invece che sul nemico.
