@@ -1,0 +1,19 @@
+Errori trovati
+
+
+1) Il gioco parte fin da subito col la schermata di game over attiva "You lost", 
+    dato che lo script PlayerController.cs setta la vita a zero tramite la chiamata alla funzione ChangeHealth(0).
+2) In PlayerController.cs, nella funzione Start() viene chaimata la Destroy(this) che elimina lo script appena il gioco parte.
+3) La salute del giocatore all'inizio del gioco è settata a zero.
+4) Il proiettile non distrugge i nemici e non si distrugge al contatto, 
+il che lascia nella gerachia tutte le copie dei proiettili sparati dal giocatore all'infinito, appesantendo l'esecuzione.
+5) E' assente la gestione del movimento del giocatore
+5.1) Il componente CharacterController, giustamente posizionato sul GameObject del giocatore, risultao inattivo nella gerarchia
+6) lo script PlayerController.cs non dovrebbe avere responsabilità circa la comprensione della vincita o perdita del gioco.
+7) Nello script PlayerLook.cs non si utilizza Time.deltaTime per essere Frame-Inpendent quanto si ottengono i valori dal mouse
+8) Lo script PlayerLook.cs dovrebbe essere messo sullamain camera associata al GO de giocatore.
+9) Alla partenza del gioco non viene visualizzato il valore della vita in UI.
+10) Non usare un rigidbody sul proiettile non porta a una gestione ottimale delle collisioni.
+
+NOTE:
+Per semplicità non si è usato il nuovo Input System di Unity ma è consigliato l'utilizzo.
